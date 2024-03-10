@@ -13,6 +13,9 @@
 		29482D7C2B9CAA90004AFCA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29482D7A2B9CAA90004AFCA2 /* Main.storyboard */; };
 		29482D7E2B9CAA91004AFCA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29482D7D2B9CAA91004AFCA2 /* Assets.xcassets */; };
 		29482D812B9CAA91004AFCA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29482D7F2B9CAA91004AFCA2 /* LaunchScreen.storyboard */; };
+		29482D892B9CABB6004AFCA2 /* RadialMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29482D882B9CABB6004AFCA2 /* RadialMenu.swift */; };
+		29482D8D2B9CAC1B004AFCA2 /* GlovoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29482D8C2B9CAC1B004AFCA2 /* GlovoItem.swift */; };
+		29482D8F2B9CAC66004AFCA2 /* GlovoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29482D8E2B9CAC66004AFCA2 /* GlovoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		29482D7D2B9CAA91004AFCA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		29482D802B9CAA91004AFCA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		29482D822B9CAA91004AFCA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29482D882B9CABB6004AFCA2 /* RadialMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadialMenu.swift; sourceTree = "<group>"; };
+		29482D8C2B9CAC1B004AFCA2 /* GlovoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlovoItem.swift; sourceTree = "<group>"; };
+		29482D8E2B9CAC66004AFCA2 /* GlovoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlovoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,42 @@
 		29482D732B9CAA90004AFCA2 /* GlovoMainView */ = {
 			isa = PBXGroup;
 			children = (
+				2958B7222B9E42D00002DA08 /* Model */,
+				2958B7212B9E42B90002DA08 /* View */,
+				2958B71F2B9E42840002DA08 /* Helpers */,
 				29482D742B9CAA90004AFCA2 /* AppDelegate.swift */,
 				29482D762B9CAA90004AFCA2 /* SceneDelegate.swift */,
-				29482D782B9CAA90004AFCA2 /* ViewController.swift */,
-				29482D7A2B9CAA90004AFCA2 /* Main.storyboard */,
-				29482D7D2B9CAA91004AFCA2 /* Assets.xcassets */,
-				29482D7F2B9CAA91004AFCA2 /* LaunchScreen.storyboard */,
 				29482D822B9CAA91004AFCA2 /* Info.plist */,
 			);
 			path = GlovoMainView;
+			sourceTree = "<group>";
+		};
+		2958B71F2B9E42840002DA08 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				29482D7F2B9CAA91004AFCA2 /* LaunchScreen.storyboard */,
+				29482D7A2B9CAA90004AFCA2 /* Main.storyboard */,
+				29482D7D2B9CAA91004AFCA2 /* Assets.xcassets */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		2958B7212B9E42B90002DA08 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				29482D782B9CAA90004AFCA2 /* ViewController.swift */,
+				29482D8E2B9CAC66004AFCA2 /* GlovoView.swift */,
+				29482D882B9CABB6004AFCA2 /* RadialMenu.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2958B7222B9E42D00002DA08 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				29482D8C2B9CAC1B004AFCA2 /* GlovoItem.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +172,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				29482D792B9CAA90004AFCA2 /* ViewController.swift in Sources */,
+				29482D892B9CABB6004AFCA2 /* RadialMenu.swift in Sources */,
 				29482D752B9CAA90004AFCA2 /* AppDelegate.swift in Sources */,
 				29482D772B9CAA90004AFCA2 /* SceneDelegate.swift in Sources */,
+				29482D8F2B9CAC66004AFCA2 /* GlovoView.swift in Sources */,
+				29482D8D2B9CAC1B004AFCA2 /* GlovoItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,8 +334,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,6 +343,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.akylmeister.GlovoMainView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -326,8 +365,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -335,6 +374,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.akylmeister.GlovoMainView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
